@@ -6,7 +6,7 @@ SERVER="nz_grpc_host:nz_grpc_port" #Dashboard 地址 ip:port
 SECRET="nz_client_secret" #SECRET
 NZ_AGENT_PATH="/opt/nezha"
 pidfile="/run/${RC_SVCNAME}.pid"
-command="nz_agent_path"
+command="nz_agent_path/nezha-agent"
 command_args="-s ${SERVER} -p ${SECRET}"
 command_background=true
 depend() {
