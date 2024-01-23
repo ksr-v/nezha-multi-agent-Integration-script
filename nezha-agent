@@ -4,10 +4,9 @@ name=nezha-agent
 supervise_daemon_args="--stdout /var/log/${name}.log --stderr /var/log/${name}.err"
 SERVER="nz_grpc_host:nz_grpc_port" #Dashboard 地址 ip:port
 SECRET="nz_client_secret" #SECRET
-NZ_BASE_PATH="/opt/nezha"
-NZ_AGENT_PATH="${NZ_BASE_PATH}/agent"
+NZ_AGENT_PATH="nz_agent_path"
 pidfile="/run/${RC_SVCNAME}.pid"
-command="/opt/nezha/agent/nezha-agent"
+command="nz_agent_path"
 command_args="-s ${SERVER} -p ${SECRET}"
 command_background=true
 depend() {
